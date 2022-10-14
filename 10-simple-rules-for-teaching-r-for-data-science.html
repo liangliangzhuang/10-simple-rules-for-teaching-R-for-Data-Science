@@ -3,8 +3,8 @@
   <head>
     <title>10 simple rules for teaching R for Data Science</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Tiffany Timbers (UBC)" />
-    <meta name="author" content="2022-09-17" />
+    <meta name="author" content="Liangliang Zhuang" />
+    <meta name="date" content="2022-09-27" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
@@ -16,13 +16,10 @@ class: top, left, title-slide
 # 10 simple rules for teaching R for Data Science
 ]
 .author[
-### Tiffany Timbers (UBC)
-]
-.author[
-### 2022-09-17
+### Liangliang Zhuang
 ]
 .date[
-### bit.ly/timbers-cascadia-r-conf-2022
+### 2022-09-27
 ]
 
 ---
@@ -93,29 +90,6 @@ ggplot(ten_lang, aes(x = mother_tongue,
 &lt;img src="img/nachos-to-cheesecake-1.png" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
-Source: 
-[Chapter 1 of *Data Science: A First Introduction*](https://datasciencebook.ca/intro.html) 
-by Tiffany Timbers, Trevor Campbell &amp; Melissa Lee
-
----
-
-&lt;!---Teaching the tidyverse can facilitate this:---&gt;
-
-.pull-left[
-&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;When you start writing a loop then turn it into dplyr &lt;a href="https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#rstats&lt;/a&gt;; David Robinson (@drob) &lt;a href="https://twitter.com/drob/status/701790246111825925"&gt;Feb 22, 2016&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-]
-
-.pull-right[
-&lt;img src="img/jenny-teach-tidyverse.png" width="1736" style="display: block; margin: auto;" /&gt;
-
-#### Explore more:
-David Robinson:
-- [Teach the tidyverse to beginners](http://varianceexplained.org/r/teach-tidyverse/)
-blog post
-- [Announcing "Introduction to the Tidyverse", my new DataCamp course](http://varianceexplained.org/r/intro-tidyverse/) blog post
-- [Introduction to the Tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse) online course
-]
 ---
 
 ### 2. Use participatory live coding!
@@ -124,24 +98,14 @@ blog post
 
 **Why?** Demonstrates process and makes you appear human!
 
-***
+&lt;!-- *** --&gt;
 
 &lt;img src="img/lex-live-coding.png" width="70%" style="display: block; margin: auto auto auto 0;" /&gt;
 
-Source: [A video introduction to live coding part 2](https://www.youtube.com/watch?v=SkPmwe_WjeY&amp;t=111s) by Lex Nederbragt
 
 ---
 
-&lt;img src="img/carpentries.png" width="70%" style="display: block; margin: auto;" /&gt;
-
-#### Explore more:
-- [Ten quick tips for teaching with participatory
-live coding](https://doi.org/10.1371/journal.pcbi.1008090) by Lex Nederbragt, Rayna Harris, Alison Hill &amp; Greg Wilson
-- [Live coding section of Teaching Tech Together](https://teachtogether.tech/en/index.html#s:performance-live) by Greg Wilson
-- Example live coding videos by Lex Nederbragt ([bad example](https://www.youtube.com/watch?v=bXxBeNkKmJE&amp;t=5s), [good example](https://www.youtube.com/watch?v=SkPmwe_WjeY&amp;t=111s))
----
-
-### 3. Give tons and tons of practice!
+### 3. Give practice!
 
 **What?** Give the learners many many problems to solve.
 
@@ -178,7 +142,7 @@ Read the data files listed in the table below and and bind the names listed in t
 
 ---
 
-### 4. Give tons and tons of timely feedback!
+### 4. Give timely feedback!
 
 **What?** Automated software tests to give hints and feedback.
 
@@ -186,12 +150,8 @@ Read the data files listed in the table below and and bind the names listed in t
 
 ***
 
-&lt;img src="img/tests-as-feedback.png" width="70%" style="display: block; margin: auto auto auto 0;" /&gt;
-
----
-
 .pull-left[
-&lt;img src="img/teaching-tech-together.jpeg" width="75%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/tests-as-feedback.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 
 .pull-right[
@@ -216,33 +176,8 @@ A small subset of the `palmerpengiuns` data set for teaching K-means clustering:
 
 &lt;img src="img/10-toy-example-clustering-1.png" width="35%" style="display: block; margin: auto;" /&gt;
 
-Source: [Clustering chapter of *Data Science: A First Introduction*](https://datasciencebook.ca/clustering.html) by Tiffany Timbers, Trevor Campbell &amp; Melissa Lee
+&lt;!-- Source: [Clustering chapter of *Data Science: A First Introduction*](https://datasciencebook.ca/clustering.html) by Tiffany Timbers, Trevor Campbell &amp; Melissa Lee --&gt;
 
----
-
-.pull-left[
-
-&lt;img src="img/jenny-dplyr-join-tweet.png" width="100%" style="display: block; margin: auto;" /&gt;
-
-.small[
-```r
-left_join(superheroes, publishers)
-```
-]
-
-We basically get `x = superheroes` back, but with the addition of variable `yr_founded`, which is unique to `y = publishers`. Hellboy, whose publisher does not appear in `y = publishers`, has an `NA` for `yr_founded`.
-
-&lt;img src="img/jenny-bryan-left-join.png" width="100%" style="display: block; margin: auto;" /&gt;
-]
-
-.pull-right[
-#### Explore more:
-- [Jenny Bryan's join cheat sheet](https://stat545.com/join-cheatsheet.html)
-- [`dpylr::tibble`](https://tibble.tidyverse.org/reference/tibble.html) or [`dpylr::tribble`](https://tibble.tidyverse.org/reference/tribble.html) R functions
-- [`sample`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sample) or [`dpylr::sample_n`](https://dplyr.tidyverse.org/reference/sample_n.html) R functions
-- [charlatan](https://docs.ropensci.org/charlatan/) R package for creating fake data
-- [drawdata.xyz](https://drawdata.xyz/) app to draw a data set and download it
-]
 ---
 
 ## 6. Use real and rich, but accessible, data sets
@@ -253,9 +188,8 @@ We basically get `x = superheroes` back, but with the addition of variable `yr_f
 
 ***
 
-&lt;img src="img/README-example-plot-from-data-1.png" width="70%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="img/README-example-plot-from-data-1.png" width="70%" style="display: block; margin: auto;" /&gt;
 
-Source: [`canlang`](https://ttimbers.github.io/canlang/) R package
 ---
 .pull-left[
 Jenny Bryan's [`gapminder`](https://github.com/jennybc/gapminder) R data package:
@@ -305,46 +239,18 @@ so that the role and rationale for unquoted column names is clear:
 
 ---
 
-.pull-left[
-&lt;img src="img/why-assignment-1.png" width="100%" style="display: block; margin: auto;" /&gt;
-
-(Or why `&lt;-` instead of `=`?)
-
-&lt;img src="img/why-assignment-2.png" width="100%" style="display: block; margin: auto;" /&gt;
-
-Source: https://colinfay.me/r-assignment/
-]
-
-.pull-right[
-
-#### Explore more:
-- [History and Overview of R chapter](https://bookdown.org/rdpeng/rprogdatascience/history-and-overview-of-r.html) from R Programming for Data Science by Roger Peng
-- [Introduction to *R for Data Engineers*](https://tidynomicon.github.io/tidynomicon/) by Greg Wilson
-- [Wikipedia article on R](https://en.wikipedia.org/wiki/R_(programming_language)
-]
----
-
 ## 8. Build a safe, inclusive and welcoming community
 
 **What?** Put in place scaffolding and guidelines to facilitate a safe learning environment.
 
 **Why?** Students cannot effectively learn if they do not feel safe.
 
-***
 
-&lt;img src="img/dsci-100-coc.png" width="75%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="img/Bayes.png" width="65%" style="display: block; margin: auto;" /&gt;
 
-Source: https://ubc-dsci.github.io/dsci-100-student/CODE_OF_CONDUCT.html
+Source: https://avehtari.github.io/BDA_course_Aalto/index.html
 ---
 
-&lt;img src="img/carpentries-coc.png" width="100%" style="display: block; margin: auto;" /&gt;
-
-Source: https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html
-
-#### Explore more:
-- [Ally Skills workshop](https://frameshiftconsulting.com/ally-skills-workshop/)
-
----
 
 ### 9. Use checklists to focus and facilitate peer learning
 
@@ -429,11 +335,11 @@ Source: https://stat545.stat.ubc.ca/
 
 --
 
-3. Give tons and tons of practice
+3. Give practice
 
 --
 
-4. Give tons and tons of feedback
+4. Give feedback
 
 --
 
@@ -462,41 +368,10 @@ Source: https://stat545.stat.ubc.ca/
 ---
 
 
-### Acknowledgements
-
-
-- UBC Master of Data Science students
-
-- UBC DSCI 100 and 310 students
-
-- [UBC Master of Data Science teaching team](https://ubc-mds.github.io/team/) and the DSCI 100 teaching team
-
-- [The Carpentries](https://carpentries.org/)
-
-- [Greg Wilson](https://third-bit.com/), Software Engineer, Deep Genomics
-
-- [Jenny Bryan](https://jennybryan.org/), Software Engineer, Posit
-
-- [David Robinson](http://varianceexplained.org/), Director of Data Scientist, Heap
-
-- [Roger Peng](https://rdpeng.org/), Professor of Statistics and Data Sciences , University of Texas, Austin
-
-- [Lex Nederbragt](https://lexnederbragt.com/), Senior Lecturer, University of Oslo
-
-- [Sean Kross](https://seankross.com/), Data Staff Scientist, Fred Hutch Data Science Lab
-
-- [Colin Fay](https://colinfay.me/), Data Scientist &amp; R Hacker, ThinkR
-
-- And many more educators in the R community!!! There are too many to list!
-
----
-
-
 class: inverse, center, middle
 
 ## 10 simple rules for teaching R for Data Science
 
-#### talk slides: *[https://bit.ly/timbers-cascadia-r-conf-2022](https://bit.ly/timbers-cascadia-r-conf-2022)*
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
